@@ -10,10 +10,12 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import dj_database_url
+import sentry_sdk
 
 from decouple import config, Csv
 from dotenv import load_dotenv
 from pathlib import Path
+from sentry_sdk.integrations.django import DjangoIntegration
 
 load_dotenv()
 
@@ -141,3 +143,8 @@ if not DEBUG:
     DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
     CLOUDINARY_URL = config('CLOUDINARY_URL')
+
+    sentry_sdk.init(
+        dsn=config('SENTRY_DSN'),
+        integrations=[DjangoIntegration()],
+    )

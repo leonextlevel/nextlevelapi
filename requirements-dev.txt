@@ -17,6 +17,7 @@ certifi==2020.12.5 \
     #   -r requirements.txt
     #   cloudinary
     #   requests
+    #   sentry-sdk
 chardet==4.0.0 \
     --hash=sha256:0d6f53a15db4120f2b08c94f11e7d93d2c911ee118b6b30a04ec3ee8310179fa \
     --hash=sha256:f864054d66fd9118f2e67044ac8981a54775ec5b67aed0441892edb553d21da5
@@ -124,6 +125,10 @@ requests==2.25.1 \
     # via
     #   -r requirements.txt
     #   django-cloudinary-storage
+sentry-sdk==1.0.0 \
+    --hash=sha256:71de00c9711926816f750bc0f57ef2abbcb1bfbdf5378c601df7ec978f44857a \
+    --hash=sha256:9221e985f425913204989d0e0e1cbb719e8b7fa10540f1bc509f660c06a34e66
+    # via -r requirements.txt
 six==1.15.0 \
     --hash=sha256:30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259 \
     --hash=sha256:8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced
@@ -147,6 +152,7 @@ urllib3==1.26.4 \
     #   -r requirements.txt
     #   cloudinary
     #   requests
+    #   sentry-sdk
 
 # WARNING: The following packages were not pinned, but pip requires them to be
 # pinned when the requirements file includes hashes. Consider using the --allow-unsafe flag.
